@@ -11,6 +11,8 @@ local x = 10
 local y = 10
 local dir = RIGHT
 
+local counter = 0
+
 gpu.setForeground(0x000000)
 gpu.setBackground(0xFFFFFF)
 
@@ -19,7 +21,6 @@ while true do
   if keyboard.isControlDown() and keyboard.isKeyDown(keyboard.keys.c) then
     break
   end
-
 
   gpu.fill(x,y,1,1," ")
   if keyboard.isKeyDown(keyboard.keys.w) then
@@ -42,5 +43,10 @@ while true do
     x = x+1
   end
 
+  if counter % 10 == 0 then
+    gpu.setBackground(0xFFFFFF)
+  end
+
   gpu.fill(x,y,1,1,"X")
+  counter = counter + 1
 end
