@@ -20,6 +20,7 @@ while true do
     break
   end
 
+
   gpu.fill(x,y,1,1," ")
   if keyboard.isKeyDown(keyboard.keys.w) then
     dir = UP
