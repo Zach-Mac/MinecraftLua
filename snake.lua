@@ -20,7 +20,7 @@ while true do
     break
   end
 
-  gpu.fill(x,y," ")
+  gpu.fill(x,y,1,1," ")
   if keyboard.isKeyDown(keyboard.keys.w) then
     dir = UP
   elseif keyboard.isKeyDown(keyboard.keys.s) then
@@ -41,5 +41,5 @@ while true do
     x = x+1
   end
 
-  gpu.fill(x,y,"X")
+  gpu.fill(x,y,1,1,"X")
 end
